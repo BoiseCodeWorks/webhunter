@@ -8,6 +8,7 @@ namespace webhunt.Models
     public string Id { get; set; }
     public IPlayer Player { get; set; }
     public IRoom CurrentRoom { get; set; }
+    public string Message { get; set; }
 
     public void ProcessInput(IInput input)
     {
@@ -27,7 +28,7 @@ namespace webhunt.Models
     private void Go(string direction)
     {
       CurrentRoom.Exits.TryGetValue(direction, out IRoom nextRoom);
-      if (nextRoom == null) { return; }
+      if (nextRoom == null) { throw new Exception("Invalid Direction"); }
       CurrentRoom = nextRoom;
     }
 

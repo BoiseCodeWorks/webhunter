@@ -48,13 +48,21 @@ namespace webhunt.Controllers
         [HttpPut("{id}")]
         public ActionResult<IGame> Put(string id, [FromBody] Input userInput)
         {
-            var game = _gs.FindGameById(id);
-            if (game == null)
+            try
             {
-                return BadRequest("Invalid Id");
+
+                var game = _gs.FindGameById(id);
+                if (game == null)
+                {
+                    return BadRequest("Invalid Id");
+                }
+                game.ProcessInput(userInput);
+                return Ok(game);
             }
-            game.ProcessInput(userInput);
-            return Ok(game);
+            catch (Exception e)
+            {
+                return BadRequest(e.Message);
+            }
         }
 
         // DELETE api/values/5

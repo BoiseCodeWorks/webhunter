@@ -3,6 +3,7 @@
     <h1>Welcome {{game.player.name}}</h1>
     <p>Room: {{game.currentRoom.name}}</p>
     <p>Description: {{game.currentRoom.description}}</p>
+    <p>{{game.message}}</p>
     <form @submit.prevent="sendInput()">
       <label for>></label>
       <input type="text" v-model.trim="input" />

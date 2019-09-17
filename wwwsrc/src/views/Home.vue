@@ -1,11 +1,11 @@
 <template>
   <div class="home">
-    <div class="error">{{displayError}}</div>
     <game v-if="game.id" />
     <form v-else @submit.prevent="createGame">
       <label for="name">What is your name?</label>
       <input type="text" v-model="user.name" autofocus="true" />
     </form>
+    <div class="error">{{displayError}}</div>
   </div>
 </template>
 
