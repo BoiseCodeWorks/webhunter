@@ -12,3 +12,16 @@ You know the drill we need an application that will allow users to play a text b
 After building the game in the setup, you will need to continually take in user input. Make sure your game loop takes in the user input, handles it updating the game state (changing a room, taking an item, etc.) then takes in a new user command.
 
 Because of how the interfaces are setup, you should be able to follow the pattern that has been laid out to build this functionality over several methods in the `App` class. 
+
+## Legal Overview
+
+The content under the CodeWorks®, LLC Organization and all of the individual repos are soley intended for use by CodeWorks Instruction to deliver Educational content to CodeWorks Students.
+
+---
+
+## Copyright
+
+© CodeWorks® LLC, 2021. Unauthorized use and/or duplication of this material without express and written permission from CodeWorks, LLC is strictly prohibited.
+
+
+<img src="https://bcw.blob.core.windows.net/public/img/7815839041305055" width="125">
